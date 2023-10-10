@@ -160,7 +160,8 @@ li {
   transform: scaleY(1.1); 
 }
 
-.active{ rotate: 45deg; }
+.active { rotate: 45deg; }
+.cross { transition: 1s; }
 
 @keyframes expand {
   from {transform: scaleY(0);}
