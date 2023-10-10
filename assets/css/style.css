@@ -134,10 +134,11 @@ li {
 .accordion span { color: #E7A281; }
 
 .panel { 
+  height: 0;
   display: none;
   background: #E7A281; 
   animation-name: expand;
-  animation-duration: 1s;
+  animation-duration: all .5s ease;
 }
 
 .panel p {
@@ -155,17 +156,17 @@ li {
 .vertical { transform: translateY(-2px) rotate(45deg); }
 .horizontal { transform:rotate(-45deg); }
 
-.activep { 
+.activepanel { 
   display: block; 
   transform: scaleY(1.1); 
 }
 
 .active { rotate: 45deg; }
-.cross { transition: 1s; }
+.cross { transition: .5s; }
 
 @keyframes expand {
-  from {transform: scaleY(0);}
-  to {transform: scaleY(1.1);}
+  from {height: 0;}
+  to {height: 40px;}
 }
 /*=================================
   main styling ends here
