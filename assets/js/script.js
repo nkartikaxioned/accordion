@@ -10,8 +10,8 @@ accordion.forEach((accord, index) => {
   accord.addEventListener('click', () => {
     removeactivep()
     removeActiveAccordion();
-    accord.classList.add('active-accordian');
-
+    // accord.classList.add('active-accordian');
+    accord.classList.toggle('active-accordian')
     button[index].classList.toggle('active');
     panel[index].classList.toggle('activepanel')
 
@@ -21,18 +21,24 @@ accordion.forEach((accord, index) => {
         panel[button.length - 1].classList.remove('activepanel')
         button[index + 1].classList.add('active');
         panel[index + 1].classList.remove('activepanel')
+        accordion[button.length - 1].classList.remove('active-accordian');
+        accordion[index + 1].classList.remove('active-accordian');
         break;
       case 1:
         button[index - 1].classList.add('active');
         panel[index - 1].classList.remove('activepanel')
         button[index + 1].classList.add('active');
         panel[index + 1].classList.remove('activepanel')
+        accordion[index - 1].classList.remove('active-accordian');
+        accordion[index + 1].classList.remove('active-accordian');
         break;
       case 2:
         button[index - 1].classList.add('active');
         panel[index - 1].classList.remove('activepanel')
         button[index - 2].classList.add('active');
         panel[index - 2].classList.remove('activepanel')
+        accordion[index - 1].classList.remove('active-accordian');
+        accordion[index -2].classList.remove('active-accordian');
         break;
     }
   })
@@ -40,8 +46,10 @@ accordion.forEach((accord, index) => {
 })
 function removeActiveAccordion() {
   accordion.forEach(accord => {
+    if(accord.querySelector('active-accordian')){
 
-    accord.classList.remove('active-accordian')
+      accord.classList.remove('active-accordian')
+    }
 
   })
 }

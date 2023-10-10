@@ -163,7 +163,7 @@ li {
 .cross { transition: .3s; }
 
 .accordion.active-accordian { 
-  background-color: #e7c6a5; 
+  background-color: #F6F6DE; 
   color: #E7A281;
 }
 
