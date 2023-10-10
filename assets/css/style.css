@@ -79,7 +79,7 @@ sub { bottom: -.25em; }
 }
 
 .cf:after { clear: both; }
-.cf { *zoom: 1; }
+.cf { zoom: 1; }
 
 /*for all*/
 body {
@@ -103,47 +103,72 @@ li {
   width: 86%; 
   margin: 0 auto;
 }
-/*=================================
-  Header styling starts here
-=================================*/
-
-
-
-
-
-
-/*=================================
-  Header styling ends here
-=================================*/  
+ 
+.caps-first::first-letter { text-transform: capitalize; }
 
 /*=================================
   main styling starts here
 =================================*/
+.accordion-container {
+ width: 100%;
+ height: 100vh;
+ display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.accordion-container .wrapper { width: 74%; }
 
+.accordion {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  background: #F6F6DE;
+  cursor: pointer;
+}
 
+.accordion {
+  display: flex;
+  justify-content: space-between;
+}
 
+.accordion span { color: #E7A281; }
 
+.panel { 
+  display: none;
+  background: #E7A281; 
+  animation-name: expand;
+  animation-duration: 1s;
+}
 
+.panel p {
+  padding: 20px;
+  color: #fff;
+}
 
+.line {
+  width: 15px;
+  height: 2px;
+  background: #8A8784;
+  transition: 1s;
+}
 
+.vertical { transform: translateY(-2px) rotate(45deg); }
+.horizontal { transform:rotate(-45deg); }
 
+.activep { 
+  display: block; 
+  transform: scaleY(1.1); 
+}
+
+.active{ rotate: 45deg; }
+
+@keyframes expand {
+  from {transform: scaleY(0);}
+  to {transform: scaleY(1.1);}
+}
 /*=================================
   main styling ends here
 =================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
 
 /*media query starts*/
 /*media query for 995px starts here*/
