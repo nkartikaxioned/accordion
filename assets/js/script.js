@@ -14,6 +14,7 @@ accordion.forEach((accord, index) => {
     accord.classList.toggle('active-accordian')
     button[index].classList.toggle('active');
     panel[index].classList.toggle('activepanel')
+    panel[index].classList.style.maxheight = '40px';
 
     switch (index) {
       case 0:

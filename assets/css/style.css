@@ -134,9 +134,10 @@ li {
 .panel { 
   display: none;
   background: #E7A281; 
-  animation-name: expand;
-  animation-duration: .5s;
-  /* transition: 1s ease-in-out; */
+  max-height: 0;
+  /* animation-name: expand;
+  animation-duration: .5s; */
+  transition: max-height 1s ease-out;
 }
 
 .panel p {
