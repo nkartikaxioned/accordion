@@ -1,7 +1,6 @@
 const button = document.querySelectorAll('.cross'),
   panel = document.querySelectorAll('.panel'),
   container = document.querySelectorAll('.contain');
-console.log(container.length);
 
 container.forEach((element, index) => {
 
